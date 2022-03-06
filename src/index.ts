@@ -1,28 +1,8 @@
-import { N11API } from './module/n11-api'
+import { CityService } from './module/services/city-service'
 require('dotenv').config()
 
-console.log('Hello world!')
+const n11Api = { CityService }
 
-new N11API().service.city.create()
-  .then(serviceCity => {
-    serviceCity.GetCities()
-      .then(data => {
-        console.log(data)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-    serviceCity.GetCity(1)
-      .then(data => {
-        console.log(data)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-    // serviceCity.tc()
-  })
-  .catch(error => {
-    console.log(error)
-  })
+export default n11Api
+export { CityService }
+module.exports = n11Api

@@ -1,8 +1,13 @@
 {
-  "name": "n11-api",
+  "name": "n11com-api",
   "version": "0.0.1",
   "description": "",
-  "main": "index.ts",
+  "main": "build/index.js",
+  "homepage": "https://github.com/Sergeant61/n11-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Sergeant61/n11-api.git"
+  },
   "scripts": {
     "start": "npm run build && node build/index.js",
     "start:dev": "nodemon",
@@ -10,7 +15,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Recep Özen",
+    "email": "rec1856rec@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.21",
