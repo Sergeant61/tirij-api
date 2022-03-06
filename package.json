@@ -1,8 +1,9 @@
 {
   "name": "n11com-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "homepage": "https://github.com/Sergeant61/n11-api#readme",
   "repository": {
     "type": "git",

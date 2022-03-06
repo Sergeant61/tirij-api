@@ -13,9 +13,10 @@ exports.SoapConnect = void 0;
 const soap_1 = require("soap");
 class SoapConnect {
     // eslint-disable-next-line no-useless-constructor
-    constructor(appKey, appSecret, options = {}) {
+    constructor(appKey, appSecret, url, options = {}) {
         this.appKey = appKey;
         this.appSecret = appSecret;
+        this.url = url;
         this.options = options;
     }
     connect() {

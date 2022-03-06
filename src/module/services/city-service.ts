@@ -5,8 +5,7 @@ export class CityService extends SoapConnect {
   // https://api.n11.com/ws/CityService.wsdl
 
   constructor (appKey: string, appSecret: string) {
-    super(appKey, appSecret)
-    this.url = 'https://api.n11.com/ws/CityService.wsdl'
+    super(appKey, appSecret, 'https://api.n11.com/ws/CityService.wsdl')
   }
 
   public async GetCities () {

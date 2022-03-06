@@ -18,8 +18,7 @@ const connect_1 = __importDefault(require("../connect"));
 class CityService extends connect_1.default {
     // https://api.n11.com/ws/CityService.wsdl
     constructor(appKey, appSecret) {
-        super(appKey, appSecret);
-        this.url = 'https://api.n11.com/ws/CityService.wsdl';
+        super(appKey, appSecret, 'https://api.n11.com/ws/CityService.wsdl');
     }
     GetCities() {
         return __awaiter(this, void 0, void 0, function* () {
