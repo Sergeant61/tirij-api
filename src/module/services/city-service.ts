@@ -9,18 +9,18 @@ export class CityService extends SoapConnect {
   }
 
   public async GetCities () {
-    return this.client.GetCitiesAsync()
+    return await this.client.GetCitiesAsync()
   }
 
   public async GetCity (cityCode: number) {
-    return this.client.GetCity({ cityCode: cityCode })
+    return await this.client.GetCity({ cityCode: cityCode })
   }
 
   public async GetDistrict (cityCode: number) {
-    return this.client.GetCitiesAsync({ cityCode: cityCode })
+    return await this.client.GetCitiesAsync({ cityCode: cityCode })
   }
 
   public async GetNeighborhoods (districtId: number) {
-    return this.client.GetNeighborhoods({ districtId: districtId })
+    return await this.client.GetNeighborhoods({ districtId: districtId })
   }
 }
