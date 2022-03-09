@@ -1,13 +1,13 @@
 {
-  "name": "n11com-api",
-  "version": "0.0.3",
+  "name": "links-api",
+  "version": "0.0.1",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "homepage": "https://github.com/Sergeant61/n11-api#readme",
+  "homepage": "https://github.com/Sergeant61/links-api#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Sergeant61/n11-api.git"
+    "url": "git@github.com:Sergeant61/links-api.git"
   },
   "scripts": {
     "start": "npm run build && node build/index.js",
@@ -36,8 +36,8 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "dotenv": "^16.0.0",
-    "soap": "^0.43.0",
-    "xml2js": "^0.4.23"
+    "node-fetch": "^3.2.2"
   }
 }

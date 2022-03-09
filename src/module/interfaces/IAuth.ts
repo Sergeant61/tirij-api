@@ -1,6 +1,6 @@
 interface IAuth {
-  appKey: string;
-  appSecret: string;
+  email: string;
+  password: string;
 }
 
 export { IAuth }

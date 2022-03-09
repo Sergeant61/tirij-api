@@ -1,16 +1,10 @@
-import { CityService } from './module/services/city-service'
+import { EExpireType } from './module/interfaces/ILinkCreate'
+import { LinkService } from './module/services/linkServices'
+
 require('dotenv').config()
 
-const n11Api = { CityService }
+const linkApi = { LinkService, EExpireType }
 
-export default n11Api
-export { CityService }
-module.exports = n11Api
-
-// new CityService('', '').connect().then(cityService => {
-//   cityService.GetCities().then(data => {
-//     console.log(data)
-//   }).catch(error => {
-//     console.log(error)
-//   })
-// })
+export default linkApi
+export { LinkService, EExpireType }
+module.exports = linkApi
