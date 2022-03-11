@@ -6,7 +6,7 @@ export class LinkService {
   private BASE_URL: string = ''
 
   constructor (options?: IOptions) {
-    this.BASE_URL = 'http://localhost:3050/' || options?.BASE_URL
+    this.BASE_URL = 'http://link.recepozen.com/' || options?.BASE_URL
   }
 
   private async http (method: string, path: string, data?: any, headers?: any) {
