@@ -6,5 +6,5 @@ export declare class LinkService {
     constructor(options?: IOptions);
     private http;
     login(email: string, password: string): Promise<this>;
-    create(data: ILinkCreate): Promise<void>;
+    create(data: ILinkCreate): Promise<any>;
 }

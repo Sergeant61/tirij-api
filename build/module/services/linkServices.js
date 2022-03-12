@@ -15,7 +15,7 @@ class LinkService {
     constructor(options) {
         this.token = '';
         this.BASE_URL = '';
-        this.BASE_URL = 'http://localhost:3050/' || (options === null || options === void 0 ? void 0 : options.BASE_URL);
+        this.BASE_URL = 'https://link.recepozen.com/' || (options === null || options === void 0 ? void 0 : options.BASE_URL);
     }
     http(method, path, data, headers) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -47,7 +47,7 @@ class LinkService {
             const body = {
                 link: data
             };
-            yield this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` });
+            return yield this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` });
         });
     }
 }

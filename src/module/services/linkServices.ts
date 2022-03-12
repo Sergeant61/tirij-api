@@ -6,7 +6,7 @@ export class LinkService {
   private BASE_URL: string = ''
 
   constructor (options?: IOptions) {
-    this.BASE_URL = 'http://link.recepozen.com/' || options?.BASE_URL
+    this.BASE_URL = 'https://link.recepozen.com/' || options?.BASE_URL
   }
 
   private async http (method: string, path: string, data?: any, headers?: any) {
@@ -40,6 +40,6 @@ export class LinkService {
       link: data
     }
 
-    await this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` })
+    return await this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` })
   }
 }
