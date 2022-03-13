@@ -8,3 +8,8 @@ export declare class LinkService {
     login(email: string, password: string): Promise<this>;
     create(slug: string, data: ILinkCreate): Promise<any>;
 }
+export declare const Link: {
+    BASE_URL: string;
+    http(method: string, path: string, data?: any, headers?: any): Promise<any>;
+    create(longUrl: string): Promise<any>;
+};

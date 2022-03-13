@@ -31,7 +31,7 @@ export class LinkService {
     return this
   }
 
-  async create (slug:string, data: ILinkCreate) {
+  async create (slug: string, data: ILinkCreate) {
     if (this.token === '') {
       throw new Error('Must be login')
     }
@@ -42,5 +42,30 @@ export class LinkService {
     }
 
     return await this.http('POST', 'api/methods/app.links.create', body, { Authorization: `Bearer ${this.token}` })
+  }
+}
+
+export const Link = {
+  BASE_URL: 'https://link.recepozen.com/',
+
+  async http (method: string, path: string, data?: any, headers?: any) {
+    const url = `${this.BASE_URL}${path}`
+
+    return await axios({
+      method: method,
+      url: url,
+      data: data,
+      headers: headers
+    })
+  },
+
+  async create (longUrl: string) {
+    const body = {
+      link: {
+        longUrl: longUrl
+      }
+    }
+
+    return await this.http('POST', 'api/methods/app.links.createFree', body)
   }
 }

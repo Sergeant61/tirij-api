@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinkService = void 0;
+exports.Link = exports.LinkService = void 0;
 const axios = require('axios');
 class LinkService {
     constructor(options) {
@@ -53,3 +53,27 @@ class LinkService {
     }
 }
 exports.LinkService = LinkService;
+exports.Link = {
+    BASE_URL: 'https://link.recepozen.com/',
+    http(method, path, data, headers) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const url = `${this.BASE_URL}${path}`;
+            return yield axios({
+                method: method,
+                url: url,
+                data: data,
+                headers: headers
+            });
+        });
+    },
+    create(longUrl) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const body = {
+                link: {
+                    longUrl: longUrl
+                }
+            };
+            return yield this.http('POST', 'api/methods/app.links.createFree', body);
+        });
+    }
+};
