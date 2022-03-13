@@ -31,15 +31,16 @@ export class LinkService {
     return this
   }
 
-  async create (data: ILinkCreate) {
+  async create (slug:string, data: ILinkCreate) {
     if (this.token === '') {
       throw new Error('Must be login')
     }
 
     const body = {
+      slug: slug,
       link: data
     }
 
-    return await this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` })
+    return await this.http('POST', 'api/methods/app.links.create', body, { Authorization: `Bearer ${this.token}` })
   }
 }

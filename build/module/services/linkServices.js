@@ -39,15 +39,16 @@ class LinkService {
             return this;
         });
     }
-    create(data) {
+    create(slug, data) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.token === '') {
                 throw new Error('Must be login');
             }
             const body = {
+                slug: slug,
                 link: data
             };
-            return yield this.http('POST', 'api/methods/link.create', body, { Authorization: `Bearer ${this.token}` });
+            return yield this.http('POST', 'api/methods/app.links.create', body, { Authorization: `Bearer ${this.token}` });
         });
     }
 }
