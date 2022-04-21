@@ -6,7 +6,7 @@ export class BaseService {
   private BASE_URL: string = ''
   Authorization: string = ''
 
-  constructor (options: IOptions | null, auth?: IAuth) {
+  constructor (options: IOptions | any, auth?: IAuth) {
     this.setOptions(options)
     if (auth) {
       this.auth(auth.username, auth.password)
@@ -17,7 +17,7 @@ export class BaseService {
     this.Authorization = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64')
   }
 
-  private setOptions (options: IOptions | null) {
+  private setOptions (options: IOptions | any) {
     this.BASE_URL = 'https://tirij.xyz/' || options?.BASE_URL
   }
 

@@ -4,13 +4,15 @@ import { IAuth } from '../interfaces/IAuth'
 import { BaseService } from './baseService'
 
 export class LinkService extends BaseService {
-  constructor (options: IOptions | null = null, auth?: IAuth) {
+  constructor (options: IOptions | any = {}, auth?: IAuth) {
     super(options, auth)
   }
 
-  async createFree (link: { longUrl: string }) {
+  async createFree (longUrl: string) {
     const body = {
-      link: link
+      link: {
+        longUrl: longUrl
+      }
     }
 
     return await this.http('POST', 'api/methods/app.links.createFree', body)
