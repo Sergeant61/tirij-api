@@ -1,13 +1,13 @@
 {
-  "name": "links-api",
-  "version": "0.0.6",
+  "name": "tirij-api",
+  "version": "0.0.7",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "homepage": "https://github.com/Sergeant61/links-api#readme",
+  "homepage": "https://github.com/Sergeant61/tirij-api#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Sergeant61/links-api.git"
+    "url": "git@github.com:Sergeant61/tirij-api.git"
   },
   "scripts": {
     "start": "npm run build && node build/index.js",
