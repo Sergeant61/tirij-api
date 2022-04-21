@@ -42,7 +42,7 @@ class LinkService extends baseService_1.BaseService {
                 type: type,
                 options: options
             };
-            return yield this.http('POST', 'api/methods/app.links.create', body, { Authorization: this.Authorization });
+            return yield this.http('POST', 'api/methods/app.links.createQr', body, { Authorization: this.Authorization });
         });
     }
     delete(slug, _id) {

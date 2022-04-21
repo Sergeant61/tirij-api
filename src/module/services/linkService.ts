@@ -35,7 +35,7 @@ export class LinkService extends BaseService {
       options: options
     }
 
-    return await this.http('POST', 'api/methods/app.links.create', body, { Authorization: this.Authorization })
+    return await this.http('POST', 'api/methods/app.links.createQr', body, { Authorization: this.Authorization })
   }
 
   async delete (slug: string, _id: string) {
