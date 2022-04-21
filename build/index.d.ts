@@ -1,13 +1,8 @@
-import { EExpireType } from './module/interfaces/ILinkCreate';
-import { LinkService, Link } from './module/services/linkServices';
+import { LinkService } from './module/services/linkService';
+import { StoresService } from './module/services/storeService';
 declare const linkApi: {
     LinkService: typeof LinkService;
-    Link: {
-        BASE_URL: string;
-        http(method: string, path: string, data?: any, headers?: any): Promise<any>;
-        create(longUrl: string): Promise<any>;
-    };
-    EExpireType: typeof EExpireType;
+    StoresService: typeof StoresService;
 };
 export default linkApi;
-export { LinkService, Link, EExpireType };
+export { LinkService, StoresService };
