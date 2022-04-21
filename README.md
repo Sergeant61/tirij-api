@@ -1,4 +1,4 @@
-# links-api
+# tirij-api
 
 Install
 
